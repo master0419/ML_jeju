@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 가상환경
+.venv/
+venv/
+env/
+
+# 데이터 (접근 금지 — 원본 데이터는 push 안 함)
+data/
+*.parquet
+*.csv
+!result/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 모델 바이너리 (용량 큼)
+model/*.pkl
+model/history/*.pkl
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# 결과 이미지 (선택적)
+# result/*.png

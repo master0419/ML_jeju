@@ -1,0 +1,61 @@
+{
+  "mode": "purchase",
+  "model_name": "LightGBM",
+  "saved_at": "20260313_114703",
+  "data_version": "f940fa08",
+  "metrics": {
+    "MAE": 89629252.0,
+    "MAPE(%)": 12.56,
+    "MSE": 8312126551373580.0,
+    "RMSE": 91170865.0
+  },
+  "features": [
+    "pur_ct_mnam",
+    "pur_ct_cancel",
+    "pur_mn_cancel",
+    "pur_n_customers",
+    "pur_n_types",
+    "pur_n_biz",
+    "ap_mn_occur",
+    "ap_mn_pay",
+    "ap_n_cust",
+    "ap_ratio",
+    "ap_days_mean",
+    "ap_rate_mean",
+    "coa_total",
+    "coa_n_accounts",
+    "month",
+    "quarter",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_6",
+    "lag_12",
+    "rolling_mean_3",
+    "rolling_std_3",
+    "rolling_mean_6",
+    "rolling_std_6",
+    "rolling_mean_12",
+    "rolling_std_12",
+    "pct_change_1",
+    "pct_change_12"
+  ],
+  "feature_count": 29,
+  "hyperparameters": {
+    "n_estimators": 300,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.7,
+    "reg_alpha": 0.1,
+    "reg_lambda": 1.0,
+    "random_state": 42,
+    "verbose": -1,
+    "min_child_samples": 5
+  },
+  "data_period": {
+    "start": "2021-01-01 00:00:00",
+    "end": "2025-06-01 00:00:00",
+    "months": 54
+  }
+}

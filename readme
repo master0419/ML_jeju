@@ -1,0 +1,15 @@
+revenue_df.parquet: 월별_매출정보
+purchase_df.parquet: 월별_매입정보
+acc_rec_df.parquet: 거래처별매출채권정보
+acc_pay_df.parquet: 거래처별매입채무정보
+ar_days_df.parquet: 거래처별매출채권회수기간
+ap_days_df.parquet: 거래처별매입채무지급기간
+coa_df: 계정과목 정보
+
+예측항목: 
+1. 매출정보 테이블에 있는 각 사업자별 기준월별 총공급가액 
+2. 매입정보 테이블에 있는 각 사업자별 기준월별 총공급가액 
+3. 전체: 
+- INFLOW_FIXED_COA  = [171000]
+- OUTFLOW_FIXED_COA = [172100, 174100, 171500]
+- VARIABLE_COA      = [178100, 177100, 173100]

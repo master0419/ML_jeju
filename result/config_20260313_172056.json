@@ -1,0 +1,116 @@
+{
+  "data_dir": "C:\\Users\\7slwm\\Downloads\\data_jeju\\data",
+  "data_files": {
+    "acc_pay": "acc_pay_df.parquet",
+    "acc_rec": "acc_rec_df.parquet",
+    "ap_days": "ap_days_df.parquet",
+    "ar_days": "ar_days_df.parquet",
+    "coa": "coa_df.parquet",
+    "purchase": "purchase_df.parquet",
+    "revenue": "revenue_df.parquet"
+  },
+  "target_col": "TOT_MN_MNAM",
+  "main_table": "revenue",
+  "date_col": "DM_DATA",
+  "window_size": 6,
+  "rolling_windows": [
+    3,
+    6
+  ],
+  "forecast_months": 6,
+  "forecast_start": "2025-01",
+  "use_log_transform": true,
+  "use_tscv": true,
+  "tscv_n_splits": 4,
+  "tscv_valid_size": 6,
+  "valid_months": 6,
+  "random_state": 42,
+  "early_stopping_rounds": 30,
+  "models": {
+    "XGBoost": true,
+    "LightGBM": true,
+    "GradientBoosting": true,
+    "RandomForest": true,
+    "Ridge": false,
+    "Ensemble_Voting": true,
+    "Ensemble_Stacking": true,
+    "LinearRegression": false,
+    "Lasso": false,
+    "DecisionTree": false,
+    "SVR": false,
+    "KNN": false
+  },
+  "model_params": {
+    "XGBoost": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "subsample": 0.7,
+      "colsample_bytree": 0.8,
+      "reg_alpha": 0.1,
+      "reg_lambda": 1.0,
+      "random_state": 42,
+      "verbosity": 0
+    },
+    "LightGBM": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.1,
+      "num_leaves": 10,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "reg_alpha": 0.1,
+      "reg_lambda": 3.0,
+      "random_state": 42,
+      "verbose": -1
+    },
+    "GradientBoosting": {
+      "n_estimators": 300,
+      "max_depth": 3,
+      "learning_rate": 0.03,
+      "random_state": 42
+    },
+    "RandomForest": {
+      "n_estimators": 100,
+      "max_depth": 10,
+      "random_state": 42,
+      "n_jobs": -1
+    },
+    "Ridge": {
+      "alpha": 1.0
+    },
+    "Lasso": {
+      "alpha": 1.0
+    },
+    "DecisionTree": {
+      "max_depth": 10,
+      "random_state": 42
+    },
+    "SVR": {
+      "kernel": "rbf",
+      "C": 1.0
+    },
+    "KNN": {
+      "n_neighbors": 5
+    }
+  },
+  "ensemble": {
+    "voting_weights": [
+      2,
+      2,
+      1
+    ],
+    "stacking_final": "Ridge",
+    "stacking_cv": 3
+  },
+  "model_dir": "./model",
+  "history_dir": "./model/history",
+  "save_results": true,
+  "results_dir": "./result",
+  "plot_results": true,
+  "experiment_name": "df7 선별 피처 (전략 A)",
+  "experiment_changes": [
+    "전략 A: 14개 피처",
+    "추가 피처: ['rev_deal_cnt_t-1', 'cancel_rate_t-1', 'rev_n_partners_t-1']"
+  ]
+}

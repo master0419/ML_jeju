@@ -1,0 +1,55 @@
+{
+  "mode": "revenue",
+  "model_name": "GradientBoosting",
+  "saved_at": "20260313_114648",
+  "data_version": "05870cd7",
+  "metrics": {
+    "MAE": 152196261.0,
+    "MAPE(%)": 16.55,
+    "MSE": 4.771137108098194e+16,
+    "RMSE": 218429327.0
+  },
+  "features": [
+    "rev_ct_mnam",
+    "rev_ct_cancel",
+    "rev_mn_cancel",
+    "rev_n_customers",
+    "rev_n_types",
+    "rev_n_biz",
+    "ar_mn_occur",
+    "ar_mn_recv",
+    "ar_n_cust",
+    "ar_ratio",
+    "ar_days_mean",
+    "ar_rate_mean",
+    "coa_total",
+    "coa_n_accounts",
+    "month",
+    "quarter",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_6",
+    "lag_12",
+    "rolling_mean_3",
+    "rolling_std_3",
+    "rolling_mean_6",
+    "rolling_std_6",
+    "rolling_mean_12",
+    "rolling_std_12",
+    "pct_change_1",
+    "pct_change_12"
+  ],
+  "feature_count": 29,
+  "hyperparameters": {
+    "n_estimators": 200,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "random_state": 42
+  },
+  "data_period": {
+    "start": "2021-01-01 00:00:00",
+    "end": "2025-06-01 00:00:00",
+    "months": 54
+  }
+}

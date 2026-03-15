@@ -1,0 +1,114 @@
+{
+  "run_id": "20260313_114703",
+  "mode": "purchase",
+  "data_version": "f940fa08",
+  "model_updated": true,
+  "previous_best_mae": null,
+  "best_model": "LightGBM",
+  "features": [
+    "pur_ct_mnam",
+    "pur_ct_cancel",
+    "pur_mn_cancel",
+    "pur_n_customers",
+    "pur_n_types",
+    "pur_n_biz",
+    "ap_mn_occur",
+    "ap_mn_pay",
+    "ap_n_cust",
+    "ap_ratio",
+    "ap_days_mean",
+    "ap_rate_mean",
+    "coa_total",
+    "coa_n_accounts",
+    "month",
+    "quarter",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_6",
+    "lag_12",
+    "rolling_mean_3",
+    "rolling_std_3",
+    "rolling_mean_6",
+    "rolling_std_6",
+    "rolling_mean_12",
+    "rolling_std_12",
+    "pct_change_1",
+    "pct_change_12"
+  ],
+  "feature_count": 29,
+  "models": [
+    {
+      "name": "LightGBM",
+      "metrics": {
+        "MAE": 89629252.0,
+        "MAPE(%)": 12.56,
+        "MSE": 8312126551373580.0,
+        "RMSE": 91170865.0
+      },
+      "train_time_sec": 0.112,
+      "best_iteration": 58,
+      "is_best": true
+    },
+    {
+      "name": "XGBoost",
+      "metrics": {
+        "MAE": 184449978.0,
+        "MAPE(%)": 27.09,
+        "MSE": 5.053498792319316e+16,
+        "RMSE": 224799884.0
+      },
+      "train_time_sec": 0.104,
+      "best_iteration": 17,
+      "is_best": false
+    },
+    {
+      "name": "Ensemble_Stacking",
+      "metrics": {
+        "MAE": 211409474.0,
+        "MAPE(%)": 30.17,
+        "MSE": 5.6865009708781944e+16,
+        "RMSE": 238463854.0
+      },
+      "train_time_sec": 2.335,
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "Ensemble_Voting",
+      "metrics": {
+        "MAE": 227061644.0,
+        "MAPE(%)": 31.76,
+        "MSE": 8.137949367246125e+16,
+        "RMSE": 285270913.0
+      },
+      "train_time_sec": 0.715,
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "RandomForest",
+      "metrics": {
+        "MAE": 282969289.0,
+        "MAPE(%)": 43.49,
+        "MSE": 1.5393809876353072e+17,
+        "RMSE": 392349460.0
+      },
+      "train_time_sec": 0.581,
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "GradientBoosting",
+      "metrics": {
+        "MAE": 430798352.0,
+        "MAPE(%)": 58.3,
+        "MSE": 3.511939332610644e+17,
+        "RMSE": 592616177.0
+      },
+      "train_time_sec": 0.221,
+      "best_iteration": null,
+      "is_best": false
+    }
+  ]
+}

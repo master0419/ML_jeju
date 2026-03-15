@@ -1,0 +1,147 @@
+{
+  "run_id": "20260313_151639",
+  "data_version": "270a6771",
+  "target": "TOT_MN_MNAM",
+  "forecast_start": "2025-01",
+  "forecast_months": 6,
+  "valid_months": 6,
+  "use_log_transform": true,
+  "use_tscv": true,
+  "model_updated": false,
+  "previous_best_mae": 0.0,
+  "features": [
+    "val_t-1",
+    "val_t-2",
+    "val_t-3",
+    "val_t-4",
+    "val_t-5",
+    "val_t-6",
+    "month",
+    "rolling_mean_3",
+    "rolling_std_3",
+    "rolling_mean_6",
+    "rolling_std_6"
+  ],
+  "feature_count": 11,
+  "best_model": "RandomForest",
+  "models": [
+    {
+      "name": "RandomForest",
+      "metrics": {
+        "MAE": 239547305.0,
+        "MAPE(%)": 25.53,
+        "MSE": 1.3599217436386163e+17,
+        "RMSE": 368771168.0
+      },
+      "train_time_sec": 0.251,
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "best_iteration": null,
+      "is_best": true
+    },
+    {
+      "name": "Ensemble_Stacking",
+      "metrics": {
+        "MAE": 265487661.0,
+        "MAPE(%)": 33.47,
+        "MSE": 1.1848212406475725e+17,
+        "RMSE": 344212324.0
+      },
+      "train_time_sec": 1.582,
+      "hyperparameters": {},
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "XGBoost",
+      "metrics": {
+        "MAE": 266689495.0,
+        "MAPE(%)": 30.64,
+        "MSE": 1.001518624117508e+17,
+        "RMSE": 316467790.0
+      },
+      "train_time_sec": 0.101,
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "subsample": 0.7,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "verbosity": 0
+      },
+      "best_iteration": 33,
+      "is_best": false
+    },
+    {
+      "name": "GradientBoosting",
+      "metrics": {
+        "MAE": 273797935.0,
+        "MAPE(%)": 24.8,
+        "MSE": 1.7321600730524435e+17,
+        "RMSE": 416192272.0
+      },
+      "train_time_sec": 0.159,
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "random_state": 42
+      },
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "Ensemble_Voting",
+      "metrics": {
+        "MAE": 276789301.0,
+        "MAPE(%)": 27.68,
+        "MSE": 1.4198258962705218e+17,
+        "RMSE": 376805772.0
+      },
+      "train_time_sec": 0.343,
+      "hyperparameters": {},
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "LightGBM",
+      "metrics": {
+        "MAE": 280070254.0,
+        "MAPE(%)": 32.16,
+        "MSE": 1.3294230995206885e+17,
+        "RMSE": 364612548.0
+      },
+      "train_time_sec": 0.105,
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "num_leaves": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 3.0,
+        "random_state": 42,
+        "verbose": -1
+      },
+      "best_iteration": 250,
+      "is_best": false
+    }
+  ],
+  "ensemble_config": {
+    "voting_weights": [
+      2,
+      2,
+      1
+    ],
+    "stacking_final": "Ridge",
+    "stacking_cv": 3
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "model_name": "RandomForest",
+  "saved_at": "20260313_151834",
+  "data_version": "270a6771",
+  "metrics": {
+    "MAE": 239547305.0,
+    "MAPE(%)": 25.53,
+    "MSE": 1.3599217436386069e+17,
+    "RMSE": 368771168.0
+  },
+  "features": [
+    "val_t-1",
+    "val_t-2",
+    "val_t-3",
+    "val_t-4",
+    "val_t-5",
+    "val_t-6",
+    "month",
+    "rolling_mean_3",
+    "rolling_std_3",
+    "rolling_mean_6",
+    "rolling_std_6"
+  ],
+  "feature_count": 11,
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "data_period": {
+    "start": "2021-01-01 00:00:00",
+    "end": "2025-06-01 00:00:00",
+    "months": 53
+  },
+  "target": "TOT_MN_MNAM",
+  "forecast_start": "2025-01",
+  "forecast_months": 6,
+  "use_log_transform": true,
+  "use_tscv": true
+}

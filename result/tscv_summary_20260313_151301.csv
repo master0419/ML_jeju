@@ -1,0 +1,7 @@
+﻿Model,MAE,MAPE(%),MSE,RMSE,MAE_std,Folds
+RandomForest,0.0,1.09,0.0,0.0,0.0,4
+GradientBoosting,0.0,1.04,0.0,0.0,0.0,4
+XGBoost,0.0,1.21,0.0,0.0,0.0,4
+LightGBM,0.0,1.44,0.0,0.0,0.0,4
+Ensemble_Voting,0.0,1.2,0.0,0.0,0.0,4
+Ensemble_Stacking,0.0,1.17,0.0,0.0,0.0,4

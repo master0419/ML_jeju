@@ -1,0 +1,114 @@
+{
+  "run_id": "20260313_114648",
+  "mode": "revenue",
+  "data_version": "05870cd7",
+  "model_updated": true,
+  "previous_best_mae": null,
+  "best_model": "GradientBoosting",
+  "features": [
+    "rev_ct_mnam",
+    "rev_ct_cancel",
+    "rev_mn_cancel",
+    "rev_n_customers",
+    "rev_n_types",
+    "rev_n_biz",
+    "ar_mn_occur",
+    "ar_mn_recv",
+    "ar_n_cust",
+    "ar_ratio",
+    "ar_days_mean",
+    "ar_rate_mean",
+    "coa_total",
+    "coa_n_accounts",
+    "month",
+    "quarter",
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_6",
+    "lag_12",
+    "rolling_mean_3",
+    "rolling_std_3",
+    "rolling_mean_6",
+    "rolling_std_6",
+    "rolling_mean_12",
+    "rolling_std_12",
+    "pct_change_1",
+    "pct_change_12"
+  ],
+  "feature_count": 29,
+  "models": [
+    {
+      "name": "GradientBoosting",
+      "metrics": {
+        "MAE": 152196261.0,
+        "MAPE(%)": 16.55,
+        "MSE": 4.771137108098194e+16,
+        "RMSE": 218429327.0
+      },
+      "train_time_sec": 0.123,
+      "best_iteration": null,
+      "is_best": true
+    },
+    {
+      "name": "RandomForest",
+      "metrics": {
+        "MAE": 213373374.0,
+        "MAPE(%)": 31.86,
+        "MSE": 7.821311078292277e+16,
+        "RMSE": 279666070.0
+      },
+      "train_time_sec": 0.356,
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "Ensemble_Voting",
+      "metrics": {
+        "MAE": 221339426.0,
+        "MAPE(%)": 31.44,
+        "MSE": 7.678207669586648e+16,
+        "RMSE": 277095790.0
+      },
+      "train_time_sec": 0.881,
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "XGBoost",
+      "metrics": {
+        "MAE": 239808298.0,
+        "MAPE(%)": 37.29,
+        "MSE": 9.794515352329293e+16,
+        "RMSE": 312961904.0
+      },
+      "train_time_sec": 0.448,
+      "best_iteration": 292,
+      "is_best": false
+    },
+    {
+      "name": "LightGBM",
+      "metrics": {
+        "MAE": 249575277.0,
+        "MAPE(%)": 34.98,
+        "MSE": 8.888222248622005e+16,
+        "RMSE": 298131217.0
+      },
+      "train_time_sec": 5.283,
+      "best_iteration": 150,
+      "is_best": false
+    },
+    {
+      "name": "Ensemble_Stacking",
+      "metrics": {
+        "MAE": 330051925.0,
+        "MAPE(%)": 48.09,
+        "MSE": 1.412398570876206e+17,
+        "RMSE": 375818915.0
+      },
+      "train_time_sec": 2.63,
+      "best_iteration": null,
+      "is_best": false
+    }
+  ]
+}

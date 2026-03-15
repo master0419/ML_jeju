@@ -1,0 +1,163 @@
+{
+  "run_id": "20260313_144125",
+  "data_version": "46e917fd",
+  "target": "TOT_MN_MNAM",
+  "forecast_start": "2025-01",
+  "forecast_months": 6,
+  "valid_months": 6,
+  "early_stopping_rounds": 30,
+  "model_updated": false,
+  "previous_best_mae": 0.0,
+  "data_period": {
+    "start": "2021-01-01 00:00:00",
+    "end": "2025-06-01 00:00:00",
+    "months": 54
+  },
+  "features": [
+    "val_t-1",
+    "val_t-2",
+    "val_t-3",
+    "val_t-4",
+    "val_t-5",
+    "val_t-6",
+    "month",
+    "rolling_mean_6",
+    "rolling_std_6",
+    "rolling_mean_3",
+    "rolling_std_3"
+  ],
+  "feature_count": 11,
+  "lag_periods": [
+    1,
+    2,
+    3,
+    6,
+    12
+  ],
+  "rolling_windows": [
+    3,
+    6,
+    12
+  ],
+  "best_model": "GradientBoosting",
+  "models": [
+    {
+      "name": "GradientBoosting",
+      "metrics": {
+        "MAE": 241726028.0,
+        "MAPE(%)": 25.78,
+        "MSE": 1.148618431981312e+17,
+        "RMSE": 338912737.0
+      },
+      "train_time_sec": 0.169,
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "random_state": 42
+      },
+      "best_iteration": null,
+      "is_best": true
+    },
+    {
+      "name": "Ensemble_Voting",
+      "metrics": {
+        "MAE": 271965623.0,
+        "MAPE(%)": 33.36,
+        "MSE": 1.1115994218773146e+17,
+        "RMSE": 333406572.0
+      },
+      "train_time_sec": 0.365,
+      "hyperparameters": {},
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "XGBoost",
+      "metrics": {
+        "MAE": 282079404.0,
+        "MAPE(%)": 39.13,
+        "MSE": 1.1170592988189765e+17,
+        "RMSE": 334224371.0
+      },
+      "train_time_sec": 0.145,
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "subsample": 0.7,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0,
+        "random_state": 42,
+        "verbosity": 0
+      },
+      "best_iteration": 98,
+      "is_best": false
+    },
+    {
+      "name": "RandomForest",
+      "metrics": {
+        "MAE": 310525884.0,
+        "MAPE(%)": 40.29,
+        "MSE": 1.522715758492817e+17,
+        "RMSE": 390219907.0
+      },
+      "train_time_sec": 0.162,
+      "hyperparameters": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "best_iteration": null,
+      "is_best": false
+    },
+    {
+      "name": "LightGBM",
+      "metrics": {
+        "MAE": 334479519.0,
+        "MAPE(%)": 44.12,
+        "MSE": 1.3057594353885192e+17,
+        "RMSE": 361352935.0
+      },
+      "train_time_sec": 2.497,
+      "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "num_leaves": 10,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "reg_alpha": 0.1,
+        "reg_lambda": 3.0,
+        "random_state": 42,
+        "verbose": -1
+      },
+      "best_iteration": 77,
+      "is_best": false
+    },
+    {
+      "name": "Ensemble_Stacking",
+      "metrics": {
+        "MAE": 1138293085.0,
+        "MAPE(%)": 170.77,
+        "MSE": 1.5988120069342876e+18,
+        "RMSE": 1264441381.0
+      },
+      "train_time_sec": 1.291,
+      "hyperparameters": {},
+      "best_iteration": null,
+      "is_best": false
+    }
+  ],
+  "ensemble_config": {
+    "voting_weights": [
+      2,
+      2,
+      1
+    ],
+    "stacking_final": "Ridge",
+    "stacking_cv": 3
+  }
+}
